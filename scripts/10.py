@@ -1,6 +1,7 @@
 from scripts.utility import read_data
 
 
+
 def puzzles(data):
     # Part 1
     program = []
