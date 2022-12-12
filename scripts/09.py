@@ -61,7 +61,7 @@ def puzzles(data):
                         tail[0] += sign((head[0] - tail[0]))
                         tail[1] += sign((head[1] - tail[1]))
                     knots[j+1] = tail.copy()
-                if j == 8:
+                if j == 8:  # j = 0 gives solution for Part 1
                     positions.append(tuple(tail))
 
     print(len(set(positions)))
