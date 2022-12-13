@@ -43,6 +43,18 @@ def puzzles(data):
 
     print((order['[[2]]'] + 1) * (order['[[6]]'] + 1 + 1))
 
+    # Part 2 - digit check
+    count = [0, 0]
+    digits = [str(s).replace('[', '').replace(']', '') for s in data]
+    for d in digits:
+        v = d.split(',')[0].strip()
+        if v == '' or int(v) < 2:
+            count[0] += 1
+            count[1] += 1
+        elif int(v) < 6:
+            count[1] += 1
+    print((count[0] + 1) * (count[1] + 1 + 1))
+
 
 if __name__ == '__main__':
     day = __file__.split('/')[-1].split('.')[0]
