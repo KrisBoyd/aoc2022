@@ -137,7 +137,7 @@ def puzzles(data, part='one'):
                     build = set(build) - {'obsidian'}
 
                 # 3a. Timed guesses - Don't build cheap bots near the end
-                if t >= 20:
+                if t >= 15:
                     build = set(build) - {'ore'}
                 if t >= 25:
                     build = set(build) - {'clay'}
