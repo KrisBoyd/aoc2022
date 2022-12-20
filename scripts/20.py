@@ -7,10 +7,8 @@ def mix_file(df):
     for j in range(len(df)):
         s = [x for x in res if x[0] == j][0]
         i = res.index(s)
-        t = (i + s[1]) % (len(df) - 1)
-        t = t if t > 0 else len(df)
         res.pop(i)
-        res.insert(t, s)
+        res.insert((i + s[1]) % (len(df) - 1), s)
     return res
 
 
